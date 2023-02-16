@@ -56,4 +56,9 @@ let cantidad_tacos=()=>{
     return 5
 } //Le agrego a una variable una función anónima para decirle qué es lo que quiero que haga cuando le pico a un botón
 
-console.log(cantidad_tacos()); //
+console.log(cantidad_tacos()); 
+
+//html dinámico con eventos
+let boton=document.getElementById("buenos-dias");
+boton.innerHTML="¡Buenos días";
+boton.onclick=()=>alert("¡Bueeeenooos díaaass!");
