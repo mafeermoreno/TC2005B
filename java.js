@@ -41,3 +41,19 @@ console.log("Hola "+nombre);
 let is_hungry=confirm("¿Tienes hambre?");
 
 console.log(is_hungry);
+
+//funciones tradicionales
+function numero_tacos (){
+    return 5;
+}
+
+console.log(numero_tacos());
+
+//Funciones modernas
+//()=> {} //Función anónima que no hace nada
+//()=> {5} //Función que hace lo mismo que la función tradicional
+let cantidad_tacos=()=>{
+    return 5
+} //Le agrego a una variable una función anónima para decirle qué es lo que quiero que haga cuando le pico a un botón
+
+console.log(cantidad_tacos()); //
