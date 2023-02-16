@@ -30,3 +30,14 @@ for (var i=1; i<=10; i++){
 }
 //Aquí no hay error, la variable u sigue existiendo
 console.log(i)
+
+//alert, prompt, confirm
+alert("hola!");
+
+let nombre=prompt("¿Cómo te llamas?");
+
+console.log("Hola "+nombre);
+
+let is_hungry=confirm("¿Tienes hambre?");
+
+console.log(is_hungry);
