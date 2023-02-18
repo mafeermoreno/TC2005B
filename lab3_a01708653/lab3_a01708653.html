@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 3</title>
+    <link rel="stylesheet" type="text/css" href="styles_lab3.css">
+</head>
+<body>
+    <header>
+        <h1>Esta soy yo</h1>
+    </header>
+    <nav>
+        <section id="inicio">
+            <h2>Menú</h2>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#quien-soy">¿Quién soy?</a></li>
+                <li><a href="#datos-generales">Datos generales</a></li>
+                <li><a href="#datos-curiosos">Datos curiosos sobre mí</a></li>
+                <li><a href="#preguntas-tarea">Preguntas de tarea</a></li>
+            </ul>   
+        </section>
+    </nav>
+    <section id="quien-soy">
+        <h2>¿Quién soy?</h2>
+        <p>
+            Mi nombre es María Fernanda Moreno Gómez, soy alumna del Tec de Monterrey, mi matrícula es A01708653
+            y actualmente estoy estudiando Ingeniería en Tecnologías Computacionales. <br>
+            Soy alguien que se considera muy creativa, es por eso que se me dan varias actividades manuales, pero 
+            también me gustan las artes y aprender varias cosas.<br>
+        </p>
+        <p class="resaltado">Mis actividades favoritas son:</p>
+        <ul>
+            <li>Bailar</li>
+            <li>Hornear</li>
+            <li>Estar con mis amigos</li>
+            <li>Ver series</li>
+            <li>Hacer manualidades</li>
+            <li>Escuchar Harry Styles y One direction</li>
+            <li>Jugar con mi perrita Zuri</li>
+            <li>Salir de compras o a pasear</li>
+        </ul>
+    </section>
+    <section id="datos-generales">
+        <h2>Datos generales</h2>
+        <table>
+            <tr>
+                <td><span class="resaltado">Nombre</span></td>
+                <td>María Fernanda Moreno Gómez</td>
+            </tr>
+            <tr>
+                <td><span class="resaltado">Matrícula</span></td>
+                <td>A01708653</td>
+            </tr>
+            <tr>
+                <td><span class="resaltado">Edad</span></td>
+                <td>20 años</td>
+            </tr>
+            <tr>
+                <td><span class="resaltado">Soy de...</span></td>
+                <td>Guadalajara</td>
+            </tr>
+            <tr>
+                <td><span class="resaltado">Signo zodiacal</span></td>
+                <td>Acuario</td>
+            </tr>
+            <tr>
+                <td><span class="resaltado">Color favorito</span></td>
+                <td>Rosa</td>
+            </tr>
+            <tr>
+                <td><span class="resaltado">Animal favorito</span></td>
+                <td>Orca</td>
+            </tr>
+        </table>
+    </section>
+    <section id="datos-curiosos">
+        <h2>Datos curiosos sobre mí</h2>
+        <table>
+            <colgroup>
+                <col>
+                <col>
+            </colgroup>
+            <tr>
+                <th><span class="resaltado">Dato 1</span></th>
+                <th><span class="resaltado">Dato 2</span></th>
+                <th><span class="resaltado">Dato 3</span></th>
+                <th><span class="resaltado">Dato 4</span></th>
+            </tr>
+            <tr>
+                <td>Alguna vez asistí a una competencia internacional en la disciplina de cheerleading. Tenía 11 años y ganamos primer lugar, sin embargo, ahorta ya perdí mucha de la flexibilidad que tenía pues ya no lo practico.</td>
+                <td>De chiquita, me cortaba las pestañas, lo que hacía enojar a mi mamá.</td>
+                <td>Me gustan mucho los animales. He rescatado varias aves que se han caído de sus nidos así como ranas que me he encontrado en mi casa e incluso, lagartijas que han estado heridas. Es por eso que tengo una perrita llamada Zuri que es mi adoración y fue adoptada ya que no la podían cuidar en su otra casa.</td>
+                <td>Una vez me encontré a Julión Álvarez en un partido de Fut al que estaba animando, y no sabía que era un cantante famoso. Tiempo después, escuché sus canciones y ahora me gustan bastante.</td>
+            </tr>
+            <tr>
+                <td><img class="img-display" src="competencia.jpg" alt="centrar foto"></td>
+                <td><img class="img-display" src="https://thumbs.dreamstime.com/b/ojo-del-beb%C3%A9-con-las-pesta%C3%B1as-largas-cercanas-encima-de-la-visi%C3%B3n-141403843.jpg" alt="centrar foto"></td>
+                <td><img class="img-display" src="zuri.jpg" alt="centrar foto"></td>
+                <td><img class="img-display" src="julion.jpg" alt="centrar foto"></td>
+            </tr>
+        </table>
+    </section>
+    <section id="preguntas-tarea">
+        <h2>Preguntas de tarea</h2>
+        <ol>
+            <li><span class="resaltado">Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS?</span><br>La recomendación es de que como el CSS es un cascading style sheets, si escribes un mismo atributo para una clase y para un selector, el que se haya puesto al último va a ser el que se sobreescriba, pues va haciendo este movimiento en cascada, pero si quieres que la regla de un selector múltiple quede como el que se va a aplicar y no quieres que se sobreescriba, tienes que poner !important, por lo que es importante priorizar primero para ver las aplicaciones del !important. </li>
+            <li><span class="resaltado">Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</span><br>Primeramente, hay que asegurarnos que el texto se pueda leer bien con la imagen, además de que este tenga un color homogéneo para que no hayan problemas con partes más claras que otras o colores distintos que hagan que el texto no pueda ser legible. El fondo se de da una definición, por lo que si es en una pantalla distinta a la definida, se verá el mosaico de la imagen de forma incorrecta, hay que hacer que el fondo tenga el suficiente tamaño ya que una imagen de fondo es una imagen de mosaico repetida, por lo que el tamaño pequeño significa muchos mosaicos y va a tardar en repetir la imagen.</li>
+            <li><span class="resaltado">Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</span><br>Al usar pixeles, se definen tamaños rígidos y se ignoran las configuraciones que cada usuario pueda tener en su navegador, es por ello que se recomindan usar porcentajes, donde se usa un ancho total del 100% y se adapta para que sea totalmente visible. Pt es puntos, cada punto es 0.35 milímetros, así que es útil cuando tienes medidas en un sistema de medidas que utilizas actualmente, pero de igual manera, no sería adaptable en todas las configuraciones.</li>
+            <li><span class="resaltado">¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</span><br>Porque el navegador va a tener un número menor de solicitudes por leer, por lo que la carga de la página será rápida.</li>
+        </ol>
+    </section>
+</body>
+</html>

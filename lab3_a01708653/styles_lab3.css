@@ -1,0 +1,82 @@
+li,p,table,ul{color:#363c42;font-family:system-ui}h1,h2,li,p,table,ul{font-family:system-ui}h1,img{padding:5px}p,tr,ul{text-align:justify}h1,th{text-align:center}td,th{word-wrap:break-word}body{min-height:100vh;max-width:1000px;background-color:#ffefd5;margin:0 auto}h1{color:#cd2088;letter-spacing:3px;font-size:40px;line-height:50px;border:7px dotted;border-color:#804501 #ea6bc0}.resaltado{color:#c76071;font-weight:700}h2{color:#894700;padding:2px;text-align:left}img{border:1px solid #ddd;border-radius:4px;width:150px;max-width:100%;height:auto}table{border:3px dotted coral;table-layout:fixed}tr{height:0;vertical-align:top}th{border-bottom:1px solid coral;background-color:rgba(255,127,80,.54);width:300px}tr:hover{background-color:rgba(255,127,80,.248)}.img-display{display:block;margin:auto}
+/**
+body {
+    min-height: 100vh;
+    max-width: 1000px;
+    background-color: papayawhip; 
+    margin: 0 auto;
+}
+h1{
+    color: rgb(205, 32, 136);
+    font-family: system-ui;
+    letter-spacing: 3px;
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 50px;
+    border: 7px dotted;
+    border-color: rgb(128, 69, 1) #ea6bc0;
+    padding: 5px 5px;
+}
+.resaltado{
+    color:rgb(199, 96, 113);
+    font-weight: bold;
+}
+h2{
+    color:#894700;
+    padding: 2px;
+    text-align: left;
+    font-family: system-ui;
+}
+p{
+    color:rgb(54, 60, 66);
+    font-family: system-ui;
+    text-align:justify;
+}
+ul{
+    color:rgb(54, 60, 66);
+    font-family: system-ui;
+    text-align:justify;
+}
+table{
+    color:rgb(54, 60, 66);
+    font-family: system-ui;
+}
+li{
+    color:rgb(54, 60, 66);
+    font-family: system-ui;
+}
+img{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+}
+table{
+    border: 3px dotted coral;
+    table-layout: fixed;
+}
+tr {
+    height: 0px;
+    text-align:justify;
+    vertical-align: top;
+}
+th{
+    text-align:center;
+    border-bottom: 1px solid coral;
+    background-color: rgba(255, 127, 80, 0.54);
+    word-wrap: break-word;
+    width: 300px;
+}
+tr:hover {background-color: rgba(255, 127, 80, 0.248);}
+td{
+    word-wrap: break-word;
+}
+.img-display{
+    display:block;
+    margin: auto;
+}
+**/
+/**padding top, padding right, padding bottom, padding left**/
