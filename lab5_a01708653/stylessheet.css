@@ -8,7 +8,7 @@ body {
 }
 footer {
     display: block;
- }
+}
 .bg-white {
     background-color: #ffffff;
 }
@@ -32,4 +32,7 @@ h2{
 }
 button{
     vertical-align: middle;
+}
+.accordion-body{
+    text-align: justify;
 }
