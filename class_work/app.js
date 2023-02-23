@@ -10,6 +10,33 @@ filesystem.writeFileSync('hola.txt', 'Hola desde node');
 
 console.log("Terminamos de escribir el archivo");
 
+const arreglo = [7000, 5000, 60, 90, 100, 10, 20, 10000, 0, 120, 2000, 340, 1000, 50];
+
+for (let item of arreglo) {
+    //Estoy diciendo que quiero que se immprima la cantidad que está en item en el tiempo de item.
+    setTimeout(() => {console.log(item);}, item);
+} 
+
+console.log("Este log está después de imrpimir el arreglo");
+
+setTimeout(() => {console.log("Ya te hackie");}, 12000);
+
+//http es el módulo que permite crear un servidor o que pueda atender peticiones http
+const http = require('http');
+
+//Recibe como paámetro, una función anónima, un parámetro para lo que se pide (objeto con los datos de la petición en la web) y otra para la respuesta, que se puede ir modificando
+const server = http.createServer( (request, response) => {    
+    console.log(request.url);
+    response.setHeader('Content-Type', 'text/html');
+    response.write("<h1>Chilaquiles</h1>");
+    response.write("Hola desde node!");
+    response.end();
+});
+
+//server.listen(puerto) con el número de puerto, preferente mayor a mil
+server.listen(3000);
+//Para abrirlo en un navegador, me voy y le pongo localhost:3000, donde 3000 es la dirección del puerto
+
 
 
 
