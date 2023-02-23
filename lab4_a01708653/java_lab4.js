@@ -59,7 +59,7 @@ for (var j=1; j<= tamanio; j++){
         positivos=positivos+1;
     }else if (arreglo_num[j]<0){
         negativos=negativos+1;
-    }else{
+    }else if (arreglo_num[j]==0){
         ceros=ceros+1;
     }
 }
