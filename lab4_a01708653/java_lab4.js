@@ -43,3 +43,28 @@ alert("Has contestado en: "+resultado+" segundos!!!");
 
 //Ejercicio 3
 document.write("<h2>Ejercicio 3: Contador de números negativos, 0´s y valores mayores a 0</h2>");
+let num_arreglo= prompt("Ingrese el tamaño de su arreglo");
+let arreglo_num = new Array();
+for (var i = 1; i <= num_arreglo; i++){
+    let numero =prompt("Ingrese un número negativo, un cero o un número positivo");
+    arreglo_num.push(numero);
+}
+document.write("<strong>El arreglo ingresado es: </strong>["+ arreglo_num+"]");
+let ceros=0;
+let negativos=0;
+let positivos=0;
+let tamanio=arreglo_num.length;
+for (var j=1; j<= tamanio; j++){
+    if (arreglo_num[j] > 0){
+        positivos=positivos+1;
+    }else if (arreglo_num[j]<0){
+        negativos=negativos+1;
+    }else{
+        ceros=ceros+1;
+    }
+}
+document.write("<br><strong>El número total de negativos en el array es: </strong>"+negativos);
+document.write("<br><strong>El número total de positivos en el array es: </strong>"+positivos);
+document.write("<br><strong>El número total de ceros en el array es: </strong>"+ceros);
+
+//Ejercicio 4
