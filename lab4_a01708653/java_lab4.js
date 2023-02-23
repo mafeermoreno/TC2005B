@@ -68,3 +68,20 @@ document.write("<br><strong>El número total de positivos en el array es: </stro
 document.write("<br><strong>El número total de ceros en el array es: </strong>"+ceros);
 
 //Ejercicio 4
+/*document.write("<h2>Ejercicio 4: Promedio de una matriz</h2>");
+let matriz_calif = new Array();
+matriz_calif.push([10,10,9]);
+matriz_calif.push([8,9,9]);
+matriz_calif.push([8,7,10]);
+let promedio_calif=0;
+document.write("<strong>Matriz a calcular: </strong><br>"+matriz_calif);
+document.write(matriz);*/
+
+//Ejercicio 5
+document.write("<h2>Ejercicio 5: Escribir el inverso de un número</h2>");
+let num_inv= prompt("Ingresa un número de dos o más cifras");
+document.write("<strong>Número ingresado: </strong>"+num_inv);
+function inverso(number){
+    return Number(number.toString().split('').reverse().join(''));
+}
+document.write("<br><strong>Número ingresado invertido: </strong>"+inverso(num_inv))
