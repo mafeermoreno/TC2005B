@@ -106,3 +106,7 @@ console.log(arreglo_de_objetos);
 //console.log(cantidad_tacos()); 
 
 //html dinámico con eventos
+
+document.getElementById("boton_verdes").onclick=()=>{
+    
+}
