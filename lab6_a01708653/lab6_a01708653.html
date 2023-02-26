@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylesheet.css" />
+    <!-- Google source -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="container-label">Train like a pro<span></span></div>
+
+            <div class="container-icon">
+                <div class="circle"><i class="bi bi-chevron-right"></i></div>
+            </div>
+            <div class="container-form">
+                <form>
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" placeholder="Introduzca su email" autofocus>
+
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="Introduzca su contraseña" onInput="check()">
+                    <div id="set">
+                        <div id="count">Longitud: 0</div>
+                        <i id="see" onclick="see()" class="far fa-eye"></i>
+                    </div>
+
+                    <div class="change-password">Para cambiar su contraseña <a href="">Clic aquí</a></div>
+
+                    <button type="submit">Ingresar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript source -->
+    <script src="js.js"></script>
+</body>
+</html>
