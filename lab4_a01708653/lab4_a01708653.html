@@ -9,6 +9,12 @@
 </head>
 <body>
     <script src="java_lab4.js"></script>
+    <section id="documentacion">
+        <h2>Documentación de la actividad #6</h2>
+        <p>
+            La actividad 6 da los días que se han vivído hasta el día actual. Lo que se hace primero es preguntar el día, mes y año en el que se nació, para posteriormente agregarlo a un objeto de tipo "Date". Posteriormente, se crea un nuevo objeto de tipo Date para incluir la fecha actual, donde se utilicen con métodos getDate para la fecha actual, getMonth para el mes actual y getFullYear para el año actual. Cabe resaltar que para el mes de nacimiento, se le debe de restar 1, ya que el formato de meses es de 0 a 11, y no de 1 a 12. Una vez con nuestros dos objetos para fecha de nacimiento y fecha actual, se hace una resta entre la fecha actual y la fecha de nacimiento con el método de getTime, que da un número en milisegundos desde el 1 de enero de 1979, entonces al hacer la resta, tenemos la diferencia en milisegundos, faltaría convertirlo a días. Para convertirlo a días, lo que hacemos es dividir esa diferencia primeramente entre 1000 por los milisegundos, después entre 60 por los 60 segundos, entre 60 de nuevo por los 60 minutos, y entre 24 horas, para que sea un día. Con esto, ya tenemos la diferencia en días desde el día de nacimiento al día actual.
+        </p>
+    </section>
     <section id="preguntas-tarea">
         <h2>Preguntas de tarea</h2>
         <ol>
@@ -16,11 +22,46 @@
             </li>
             <a href="https://www.thesoftwareguild.com/faq/difference-between-java-and-javascript/#:~:text=According%20to%20the%20Java%20platform,and%20need%20only%20be%20interpreted.">Referencia 1</a>
             <a href="https://www.electronicproducts.com/java-vs-javascript-differences-and-similarities/">Referencia 2</a>
-            <li class="texto-justificado"><strong>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</strong><br>-</li>
-            <li class="texto-justificado"><strong>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</strong><br>-</li>
-            <li class="texto-justificado"><strong>¿Cómo se declara una variable con alcance local dentro de una función?</strong><br>-</li>
-            <li class="texto-justificado"><strong>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</strong><br>-</li>
+            <li class="texto-justificado"><strong>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</strong><br>
+                <ol>
+                    <li><strong>getFullYear() </strong>Devuelve el año con 4 dígitos</li>
+                    <li>getMonth() <strong></strong>Devuelve el número de mes del 0 (enero) al 11 (diciembre)</li>
+                    <li><strong>getDate() </strong>Devuelve el día del mes, del 1 al 31</li>
+                    <li><strong>getDay() </strong>Devuelve el día de la semana del 0 (domingo) al 6 (sábado)</li>
+                    <li><strong>getHours() </strong>Devuelve la hora actual, desde 0 hasta 23 (formato 24 hrs)</li>
+                    <li><strong>getMinutes() </strong>Devuelve los minutos actuales, desde 0 hasta 59</li>
+                    <li><strong>getSeconds()/getMilliseconds()/getTime() </strong>Devuelve los segundos(0-59), los millisegundos (0-999) y los milisegundos transcurridos desde el 01/01/1970 (el 'tiempo Unix')</li>
+                </ol>
+            </li>
+            <a href="https://www.digitallearning.es/intro-programacion-js/metodos-date.html">Referencia 1</a>
+            <li class="texto-justificado"><strong>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</strong><br>
+                <ol>
+                    <li><strong>push() </strong>Inserta un elemento al final del arreglo</li>
+                    <li><strong>unshift() </strong>Inserta un elemento al inicio del arreglo</li>
+                    <li><strong>pop() </strong>Remueve un elemento del final del arreglo</li>
+                    <li><strong>shift() </strong>Remueve un elemento del principio del arreglo</li>
+                    <li><strong>slice() </strong>Crea una copia sombra del arreglo</li>
+                    <li><strong>Array.isArray() </strong>Determina si el valor es un arreglo</li>
+                    <li><strong>length </strong>Determina el tamaño del arreglo</li>
+                </ol>
+            </li>
+            <a href="https://www.freecodecamp.org/espanol/news/el-manual-de-arreglos-en-javascript/#:~:text=M%C3%A9todos%20de%20arreglo%20JavaScript&text=unshift()%20%E2%80%93%20Inserta%20un%20elemento,una%20copia%20sombra%20del%20arreglo.">Referencia 1</a>
+            <li class="texto-justificado"><strong>¿Cómo se declara una variable con alcance local dentro de una función? </strong><br>Las variables declaradas en lugares acotados como por ejemplo, en una función, las cuales sólo se pueden acceder a ellas dentro del lugar donde se han declarado. Para declararla, se hace lo siguiente:<br>
+            function miFuncion(){
+                var variableLocal
+            }
+            </li>
+            <a href="http://127.0.0.1:5500/lab4_a01708653/lab4_a01708653.html">Referencia 1</a>
+            <li class="texto-justificado"><strong>¿Qué implicaciones tiene utilizar variables globales dentro de funciones? </strong><br>Al declarar una variable dentro de una función, esta se convierte en local, y es por eso que no puede ser accedida fuera de esta. Además, en general el uso de las variables globales crea dependencias ocultas, y en aplicaciones grandes, no se saben los onjetos que se tiene y sus relaciones. Una variable debe de tener una vida lo más corta posible, para que la cantidad de código que hace uso sea el mínimo posible.</li>
         </ol>
     </section>
+    <footer>
+        <p>
+            Por: María Fernanda Moreno Gómez<br>
+            Matrícula: A01708653<br>
+            IDE: Visual Studio Code <br>
+            Navegador: Google Chrome
+        </p>
+    </footer>
 </body>
 </html>
