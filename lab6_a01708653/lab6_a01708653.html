@@ -25,14 +25,29 @@
 
                     <label for="password">Contraseña</label>
                     <input type="password" id="password" placeholder="Introduzca su contraseña" onInput="check()">
+                    <i id="see" onclick="see()" class="far fa-eye"></i>
                     <div id="set">
-                        <div id="count">Longitud: 0</div>
-                        <i id="see" onclick="see()" class="far fa-eye"></i>
+                        <div id="count">Longitud:0</div>
+                    </div>
+                    <div id="check0">
+                        <i class="far fa-check-circle"></i><span> Longitud mayor a 5.</span>
+                    </div>
+                    <div id="check1">
+                        <i class="far fa-check-circle"></i><span> Longitud menor a 10.</span>
+                    </div>
+                    <div id="check2">
+                        <i class="far fa-check-circle"></i><span> Contiene un caracter numérico.</span>
+                    </div>
+                    <div id="check3">
+                        <i class="far fa-check-circle"></i><span> Contiene caracteres especiales.</span>
+                    </div>
+                    <div id="check4">
+                        <i class="far fa-check-circle"></i><span> No contiene espacios.</span>
                     </div>
 
                     <div class="change-password">Para cambiar su contraseña <a href="">Clic aquí</a></div>
 
-                    <button type="submit">Ingresar</button>
+                    <button type="submit"><a href="preguntas_tarea.html">Ingresar</a></button>
                 </form>
             </div>
         </div>
