@@ -40,3 +40,21 @@ function string2txt(string1){
 }
 string2txt("Me gusta mucho escribir en Node js")
 console.log("Terminamos de escribir el archivo");
+
+//Ejercicio 3 Bubble Sort
+function bubblesort (arreglo2){
+    let tamanio=arreglo2.length;
+    for (let m=tamanio-1; m>0; m--){
+        for (let n=0; n<tamanio; n++){
+            if(arreglo2[n]>arreglo2[n+1]){
+                let swap = arreglo2[n];
+                arreglo2[n]=arreglo2[n+1];
+                arreglo2[n+1]=swap
+            }
+        }
+    }
+    return arreglo2;
+}
+console.log("Arreglo enviado: [6,4,2,5,7]")
+console.log("Arreglo ordenado con Bubblesort:")
+console.log(bubblesort([6,4,2,5,7]));
