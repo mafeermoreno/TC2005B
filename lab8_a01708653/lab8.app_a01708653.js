@@ -1,18 +1,3 @@
-const http = require('http');
-
-const hostname = '127.0.0.1';
-const port = 3200;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
-
 //Ejercicio 1
 function promArreglo(arreglo1){
     let suma=0;
@@ -58,3 +43,268 @@ function bubblesort (arreglo2){
 console.log("Arreglo enviado: [6,4,2,5,7]")
 console.log("Arreglo ordenado con Bubblesort:")
 console.log(bubblesort([6,4,2,5,7]));
+
+//Servidor
+const http = require('http');
+const server = http.createServer((request, response) => {
+    response.setHeader("Conten-Type", "html/text");
+    response.write(`<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>This is me</title>
+    </head>
+    <body>
+        <header>
+            <h1 style="color: rgb(255, 0, 153); letter-spacing: 2px; padding: 10px">Esta soy yo</h1>
+        </header>
+        <nav>
+            <section id="inicio">
+                <h2>Menú</h2>
+                <ul>
+                    <li style="color: blue;"><a href="#inicio" style="color: blue;">Inicio</a></li>
+                    <li style="color: blue;"><a href="#quien-soy" style="color: blue;">¿Quién soy?</a></li>
+                    <li style="color: blue;"><a href="#datos-generales" style="color: blue;">Datos generales</a></li>
+                    <li style="color: blue;"><a href="#preguntas-tarea" style="color: blue;">Preguntas de tarea</a></li>
+                </ul>      
+                <form>
+                    <input type="search" name="q" placeholder="Search" />
+                    <input type="submit" value="Buscar" />
+                </form>
+            </section>
+        </nav>
+        <section id="quien-soy">
+            <h2>¿Quién soy?</h2>
+            <p style="color:rgb(43, 42, 43)">
+                Mi nombre es María Fernanda Moreno Gómez, soy alumna del Tec de Monterrey, mi matrícula es A01708653
+                y actualmente estoy estudiando Ingeniería en Tecnologías Computacionales. <br>
+                Soy alguien que se considera muy creativa, es por eso que se me dan varias actividades manuales, pero 
+                también me gustan las artes y aprender varias cosas.<br><br>
+                <strong style="color:midnightblue">Mis actividades favoritas son:</strong><br>
+                <ul style="color:rgb(43, 42, 43);">
+                    <li>Bailar</li>
+                    <li>Hornear</li>
+                    <li>Estar con mis amigos</li>
+                    <li>Ver series</li>
+                    <li>Hacer manualidades</li>
+                    <li>Escuchar Harry Styles y One direction</li>
+                    <li>Jugar con mi perrita Zuri</li>
+                    <li>Salir de compras o a pasear</li>
+                </ul>
+        </section>
+        <section id="datos-generales">
+            <h2>Datos generales</h2>
+            <p style="color:rgb(43, 42, 43)">
+                <table style="color:rgb(43, 42, 43);">
+                    <tr>
+                        <td style="background-color: rgb(236, 206, 229)"><strong>Nombre</strong></td>
+                        <td>María Fernanda Moreno Gómez</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: rgb(236, 206, 229)"><strong>Matrícula</strong></td>
+                        <td>A01708653</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: rgb(236, 206, 229)"><strong>Edad</strong></td>
+                        <td>20 años</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: rgb(236, 206, 229)"><strong>Soy de...</strong></td>
+                        <td>Guadalajara</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: rgb(236, 206, 229)"><strong>Signo zodiacal</strong></td>
+                        <td>Acuario</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: rgb(236, 206, 229)"><strong>Color favorito</strong></td>
+                        <td>Rosa</td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: rgb(236, 206, 229)"><strong>Animal favorito</strong></td>
+                        <td>Orca</td>
+                    </tr>
+                </table>
+        
+        </section>
+        <section id="preguntas-tarea">
+            <h2>Preguntas de la tarea</h2>
+            <ul style="color:rgb(43, 42, 43);">
+                <li><strong>¿Cuál es la diferencia entre Internet y la World Wide Web?</strong></li>
+            </ul>
+            <p>
+                La World Wide Web (WWW) es una red informática de alcance mundial, el cual contiene sistemas de hipertextos e hipermedios (como páginas web) interconectados entre sí, a los cuales se puede acceder con Internet y software especializado, mientras que el Internet es solamente una red de computadoras muy grande alrededor del mundo <br>
+            </p>
+            <a href="https://www.bbc.com/mundo/noticias-47538812#:~:text=Internet%20es%20una%20inmensa%20red,para%20acceder%20a%20la%20web.">Referencia 1</a>
+            <a href="https://concepto.de/www/#:~:text=Se%20llama%20World%20Wide%20Web,un%20conjunto%20de%20software%20especializado.">Referencia 2</a><br><br>
+            <ul>
+                <li><strong>¿Cuáles son las partes de un URL?</strong></li>
+            </ul>
+            <p>
+                Son los siguientes:
+            </p>
+            <ul>
+                <li>Protocolo HTTPS</li>
+                <li>Subdominio</li>
+                <li>Dominio</li>
+                <li>TLD</li>
+                <li>Ruta</li>
+                <li>Parámetro</li>
+                <li>Etiqueta</li>
+            </ul>
+            <img src="https://superadmin.es/blog/img/posts/estructura-url.png" 
+                alt="partes de un URL"
+                width="500" 
+                style="border: 5px solid rgb(128, 0, 90);"><br>
+            <a href="https://edytapukocz.com/url-partes-ejemplos-facil/">Referencia 1</a>
+            <a href="https://superadmin.es/blog/que-es/direccion-web-url/">Referencia 2</a><br><br>
+            <ul>
+                <li><strong>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</strong></li>
+            </ul>
+            <ul>
+                <li><strong>GET: </strong>Realiza una petición a un recurso específico. No permite el envio de datosma excepción si dichos datos se envían como parámetro en la Url que realiza la petición. Retorna la cabecera y el contenido.</li>
+                <li><strong>HEAD: </strong>Similar al GET, pero no retorna un HTTP Response. En la petición no se interesa en el contenido, sólo en el código de HTTP de Respuesta y el encabezado (headers).</li>
+                <li><strong>POST: </strong>Puede enviar datos al servidor por medio del cuerpo (body) y nada por la Url como se emplea en el método GET. Registra información a nivel de base de datos.</li>
+                <li><strong>PUT: </strong>Similar al POST, pero este es indepotente (puede ser ejecutado varias veces y tiene el mismo efecto). En POST cada vez que se ejecura agrega un nuevo objeto (como una insercción) y el PUT actualica la informaación existente.</li>
+                <li><strong>PATCH: </strong>Hacer modificaciones parciales de un recurso en particular. Actualiza una parte de registro (hace como un UPDATE a nivel base de datos).</li>
+                <li><strong>DELETE: </strong>Permite eliminar un recurso específico. Es indeponente, elimina información existente.</li>
+            </ul>
+            <a href="http://estilow3b.com/metodos-http-post-get-put-delete/#:~:text=Este%20m%C3%A9todo%20se%20utiliza%20para,acepta%20peticiones%20de%20diferentes%20or%C3%ADgenes.">Referencia 1</a><br>
+            <ul>
+                <li><strong>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</strong></li>
+            </ul>
+            <p>
+                El método POST, ya que puede rellenar formularios con nombres de usuario y contraseñas con discreción. Los datos no se muestran en el caché ni en el historial de navegación.<br>
+            </p>
+            <a href="hhttps://www.ionos.es/digitalguide/paginas-web/desarrollo-web/get-vs-post/">Referencia 1</a><br>
+            <ul>
+                <li><strong>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</strong></li>
+            </ul>
+            <p>
+                Es el método GET, ya que los datos que se envían al servidor se escriben en la misma dirección URL. La información introducida por el usuario (los parámetros URL) se ntransmiten abiertamente como el URL en sí mismo y puede guardar junto la dirección URL como el marcador.
+            </p>
+            <a href="https://www.bbc.com/mundo/noticias-47538812#:~:text=Internet%20es%20una%20inmensa%20red,para%20acceder%20a%20la%20web.">Referencia 1</a><br>
+            <ul>
+                <li><strong>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</strong></li>
+            </ul>
+            <p>
+                Este código no es un error, sino que significa que la fágina ha cargado de forma correcta (códigos de estado 2XX, un 2 seguido de 2 números, indican que la carga ha ido bien).
+            </p>
+            <a href="https://www.webempresa.com/blog/tipos-errores-http-como-resolverlos.html#:~:text=C%C3%B3digo%20200%3A%20esto%20no%20es,todo%20va%20como%20la%20seda.">Referencia 1</a><br>
+            <ul>
+                <li><strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</strong></li>
+            </ul>
+            <p>
+                El error 404 aparece debido a que el contenido de la web ha sido eliminado o trasladado a otro URL, o en su defe to, archivos/imágenes han sido cambiados o eliminados, porque el enlace no se colocó correctamente, problemas de conexión o el dominio no existe. Estos problemas ya no son del desarrollador, ya que son problemas que no tienen que ver con la estructura de la página, son errores por cuestiones externas a este.
+            </p>
+            <a href="https://www.ionos.mx/digitalguide/paginas-web/creacion-de-paginas-web/que-significa-el-error-404-not-found/">Referencia 1</a><br>
+            <ul>
+                <li><strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</strong></li>
+            </ul>
+            <p>
+                La mayoría de los errores de tipo 500 son errores por parte del servidor, por lo que es un problema del sitio web y es algo que el desarrollador debe atender. Esto puede ser por un error de permisos, un tiempo de espera de PHP o un error de codificación en .htaccess. Por estas razones, sí es encesario que el desarrollador los arregle, checando su el sitio está estructurado correctamente.
+            </p>
+            <a href="https://www.cdmon.com/es/blog/error-500-internal-server-error#:~:text=Un%20error%20interno%20del%20servidor,trata%20de%20tu%20sitio%20web.">Referencia 1</a><br>
+            <ul>
+                <li><strong>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</strong></li>
+            </ul>
+            <p>
+                En HTML 5 hay etiquetas aprobadas y desaprobadas, las desaprobadas nos dicen que su uso ya no es recomendado por cuestiones de un estándar actualizado, por lo que hay etiquetas que son agregadas, removidas o desaprobadas. Algunos ejemplos son: acronym, applet, basefont, big, center, font.
+            </p>
+            <a href="https://sites.google.com/site/dwebhtml/reference/deprecated#:~:text=Los%20tags%20y%20atributos%20desaprobados,son%20agregada%2C%20removidas%20o%20desaprobadas.">Referencia 1</a><br>
+            <a href="https://sites.google.com/site/dwebhtml/reference/tags">Referencia 2</a>
+            <ul>
+                <li><strong>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</strong></li>
+            </ul>
+            <p>
+                HTML 5 está aún en proceso de evolución, algunas etiquetas están siendo modificadas y añadidas. HTML 4 tiene ya un estándar establecido en las aplicaciones del navegador y ha sido usado por más de 10 años. HTML 4 es compatible con casi todos los navegadores web. El atributo id es usado para referirse al canvas in javascript y el ancho y alto son usados para definir el tamaño del canvas en HTML 5. HTML 5 da consistencia en documentos malformados, ya que tiene un mejor manejo de errores, mientras que HTML 4 no tiene tal consistencia con el manejo de errores. HTML 5 tiene soporte multimedia y HTML 4 tiene el soporte por un tercero como Silverlight y Flash.
+            </p>
+            <a href="https://www.educba.com/html5-vs-html4/">Referencia 1</a><br>
+            <ul>
+                <li><strong>¿Qué componentes de estructura y estilo tiene una tabla?</strong></li>
+            </ul>
+            <p>
+                <strong>Los componentes de estructura son:</strong><br>
+                -Etiqueta table: Sirve para hacer tablas<br>
+                -Etiqueta td: Define la celda de  una tabla que contiene datos<br>
+                -Etiqueta th: Define una celda como encabezado de un grupo de celdas en una tabla<br>
+                -Etiqueta tr: Inserta una fila en una tabla<br>
+                -Etiqueta thead: Define una sección de encabezado en una tabla<br>
+                -Etiqueta tbody: Define una sección de cuerpo en una tabla, útil para dividir temáticamente a las filas de una tabla<br>
+                -Etiqueta tfoot: Define el pie de la tabla<br>
+                -Etiqueta caption: Poner una leyenda en la tabla<br>
+                -Etiqueta col: Permite especificar propiedades para una columna o grupo de ellas<br>
+                -Etiqueta colspan: Permite fusionar celdas consecutivas de una misma fila<br>
+                Entre los componentes de estilo podemos encontrar width para la anchura de la tabla, border para el borde de la tabla, frame paralas partes del borde que va a representar, rules para las líneas de división entre filas y columnas, cellspacing para el espaciado entre celdas y cellpadding para el espacio dentro de las celdas. <br>
+            </p>
+            <a href="https://www.mclibre.org/consultar/htmlcss/html/html-tablas.html">Referencia 1</a>
+            <a href="http://html.conclase.net/w3c/html401-es/struct/tables.html#adef-summary">Referencia 2</a>
+            <ul>
+                <li><strong>¿Cuáles son los principales controles de una forma HTML5?</strong></li>
+            </ul>
+            <p>
+                -Campo de direccipon de correo<br>
+                -Campo de búsqueda<br>
+                -Campo número de teléfono<br>
+                -Campo URL<br>
+                -Campo numérico<br>
+                -Slider controls<br>
+                -Date and time pickers<br>
+                -Color picker<br>
+                -Botón de enviar
+            </p>
+            <a href="hhttps://developer.mozilla.org/es/docs/Learn/Forms">Referencia 1</a>
+            <a href="https://mosaic.uoc.edu/ac/le/es/m8/ud3/index.html">Referencia 2</a>
+            <ul>
+                <li><strong>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para descubrirlo: http://html5test.com/ (Al responder la pregunta recuerda poner el navegador que utilizas)</strong></li>
+            </ul>
+            <p>
+                Mi navegador tuvo un puntaje de 476 puntos de 555 puntos. El navegador que utilizo es Google Chrome.
+            </p>
+            <a href="http://html5test.com/">Referencia 1</a><br>
+            <ul>
+                <li><strong>Sobre el ciclo de vida y desarrollo de los sistemas de información:<br>
+                    ¿Cuál es el ciclo de vida de los sistemas de información?<br>
+                    ¿Cuál es el ciclo de desarrollo de sistemas de información?</strong></li>
+            </ul>
+            <ol>
+                <li> Planificación
+                <li> Análisis de requerimientos
+                <li> Diseño
+                <li> Desarrollo
+                <li> Prueba
+                <li> Integración y ejecución
+                <li> Operación
+                <li> Mantenimiento
+            </ol>
+            <a href="https://keepcoding.io/blog/ciclo-de-vida-del-desarrollo-del-sistema/">Referencia 1</a>
+            <a href="https://blog.powerdata.es/el-valor-de-la-gestion-de-datos/ciclo-de-vida-de-un-sistema-de-informacion-fases-y-componentes">Referencia 2</a>
+        </section>
+        <footer>
+            María Fernanda Moreno Gómez<br>
+            Correo: A01708653@tec.mx <br>
+            Editor: Visual Studio Code <br>
+            Link del editor:https://code.visualstudio.com/ 
+        </footer>
+    </body>
+    </html>
+    `);
+    response.end();
+});
+server.listen(3000);
+/*
+const http = require('http');
+const hostname = '127.0.0.1';
+const port = 3200;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});*/
