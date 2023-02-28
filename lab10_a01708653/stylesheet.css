@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Emilys+Candy&family=Fahkwang:wght@500&family=Henny+Penny&family=Poppins&family=Quicksand&display=swap');
+body {
+    background: #ffb1ea; /* fallback for old browsers */
+}
+.resaltado{
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+}
+.navbar-brand{
+    font-family: 'Emilys Candy', cursive;
+}
+h1{
+    font-family: 'Fahkwang', sans-serif;
+    color: #4b0232;
+    margin: 4px;
+    padding: 4px;
+    text-align: center;
+    font-size: 40px;
+}
+.carrusel{
+    padding: 15px;
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+}
