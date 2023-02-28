@@ -1,0 +1,25 @@
+{
+  "name": "tc2005b",
+  "version": "1.0.0",
+  "description": "Clase 2005B",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mafeermoreno/TC2005B.git"
+  },
+  "keywords": [
+    "node",
+    "tec",
+    "teus"
+  ],
+  "author": "Mafer Moreno",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafeermoreno/TC2005B/issues"
+  },
+  "homepage": "https://github.com/mafeermoreno/TC2005B#readme"
+}
