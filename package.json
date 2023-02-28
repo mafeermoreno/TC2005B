@@ -4,7 +4,7 @@
   "description": "Clase 2005B",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/mafeermoreno/TC2005B/issues"
   },
-  "homepage": "https://github.com/mafeermoreno/TC2005B#readme"
+  "homepage": "https://github.com/mafeermoreno/TC2005B#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
