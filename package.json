@@ -24,5 +24,8 @@
   "homepage": "https://github.com/mafeermoreno/TC2005B#readme",
   "devDependencies": {
     "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
