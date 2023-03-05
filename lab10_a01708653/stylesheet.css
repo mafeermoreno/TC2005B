@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Emilys+Candy&family=Fahkwang:wght@500&family=Henny+Penny&family=Poppins&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Emilys+Candy&family=Fahkwang:wght@500&family=Henny+Penny&family=Montserrat&family=Poppins&family=Quicksand&display=swap');
+
 body {
     background: #ffb1ea; /* fallback for old browsers */
 }
@@ -29,4 +30,18 @@ h2{
     color: #6c0347;
     font-size: 20px;
     margin-top: 3px;
+}
+.texto-principal{
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+}
+.titulos-joyeria{
+    font-family: 'Fahkwang', sans-serif;
+    text-align: center;
+    color: #6c0347;
+    font-size: 18px;
+    margin-top: 3px;
+}
+p{
+    color: rgb(50, 47, 44);
 }
