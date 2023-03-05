@@ -24,16 +24,15 @@ h1{
     max-width: 100%;
     height: 400px;
 }
+.carrousel-text{
+    text-align: center;
+}
 h2{
     font-family: 'Fahkwang', sans-serif;
     text-align: center;
     color: #6c0347;
     font-size: 20px;
     margin-top: 3px;
-}
-.texto-principal{
-    font-family: 'Montserrat', sans-serif;
-    text-align: justify;
 }
 .titulos-joyeria{
     font-family: 'Fahkwang', sans-serif;
@@ -44,4 +43,53 @@ h2{
 }
 p{
     color: rgb(50, 47, 44);
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+}
+.card-text{
+    font-size: 14px;
+}
+.card{
+    max-height: 100%;
+    height: 400px;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+.card-img-top{
+    padding: 15px;
+    width: 75%;
+    max-width: 100%;
+    height: 200px;
+}
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Fahkwang', sans-serif;
+}
+.imagen-inicio{
+    padding: 15px;
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+}
+.img-fluid{
+    padding: 15px;
+    width: 75%;
+    max-width: 100%;
+    height: 500px;
 }
