@@ -23,11 +23,11 @@ app.use('/hola', (request, response, next) => {
     response.send('Hola desde la ruta /hola');
 });
 
-const hockeyRutas = require('./routes/hockey.routes');
+const hockeyRutas = require('../routes/hockey.routes');
 
 app.use('/hockey', hockeyRutas);
 
-const rutasChilaquiles = require('./routes/chilaquiles.routes');
+const rutasChilaquiles = require('../routes/chilaquiles.routes');
 
 app.use('/chilaquiles', rutasChilaquiles);
 
