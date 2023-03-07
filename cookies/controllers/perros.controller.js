@@ -20,6 +20,15 @@ exports.post_nuevo = (request, response, next) => {
 };
 
 exports.listar = (request, response, next) => {
-    console.log(request.get('Cookie').split('='[1]));
+
+    //Crear variable para que si no hay cookie se cuente con un string para hacer el split
+    let cookies = request.get('Cookie') || '';
+
+    let consultas = cookies.split(';')[0].split('=')[1] || 0;
+
+    consultas++;
+
+    response.setHeader('Set-Cookie', 'consultas=' + consultas + '; HttpOnly');
+
     response.render('lista', { razas: Perro.fetchAll() });
 };
