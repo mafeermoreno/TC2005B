@@ -1,36 +1,22 @@
-const razas = [
-    { 
-        raza: "Beagle", 
-        imagen: "https://bulma.io/images/placeholders/1280x960.png", 
-        handle: "@beagle",
-        descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."
-    }, 
-    {
-        raza: "Golden",
-        imagen: "https://bulma.io/images/placeholders/1280x960.png", 
-        handle: "@golden",
-        descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."
-    }, 
-    { 
-        raza: "Husky",
-        imagen: "https://bulma.io/images/placeholders/1280x960.png", 
-        handle: "@husky",
-        descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."
-    },
-    { 
-        raza: "Chilakil",
-        imagen: "https://bulma.io/images/placeholders/1280x960.png", 
-        handle: "@chilakil",
-        descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."
-    },
-    { 
-        raza: "Pug",
-        imagen: "https://bulma.io/images/placeholders/1280x960.png", 
-        handle: "@pug",
-        descripcion: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris."
-    } 
-];
+const Perro = require('../models/perros.model');
+
+exports.get_nuevo = (request, response, next) => {
+    response.render('nuevo');
+};
+
+exports.post_nuevo = (request, response, next) => {
+
+    const perro = new Perro({
+        nombre: request.body.nombre,
+        raza: request.body.raza,
+        descripcion: request.body.descripcion,
+    });
+
+    perro.save();
+
+    response.redirect('/perros/');
+};
 
 exports.listar = (request, response, next) => {
-    response.render('lista', {razas: razas});
+    response.render('lista', { razas: Perro.fetchAll() });
 };
