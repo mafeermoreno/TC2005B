@@ -50,6 +50,12 @@
     <h1>No hay razas registradas</h1>
 <% } %>   
 
+<% if (ultimo_perro != '') { %>
+    <div class="notification is-link is-light">
+        Último perro agregado: <%= ultimo_perro %>
+    </div>
+<% } %>
+
 <a href="/perros/nuevo" class="button is-link is-rounded">Registrar perro</a>
 
 <%- include('includes/foot.ejs') %>

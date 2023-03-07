@@ -14,7 +14,7 @@ exports.post_nuevo = (request, response, next) => {
 
     perro.save();
 
-    response.setHeader('Set-Cookie', 'ultimo_perro=' + perro.nombre);
+    request.session.ultimo_perro = perro.nombre;
 
     response.redirect('/perros/');
 };
@@ -30,5 +30,8 @@ exports.listar = (request, response, next) => {
 
     response.setHeader('Set-Cookie', 'consultas=' + consultas + '; HttpOnly');
 
-    response.render('lista', { razas: Perro.fetchAll() });
+    response.render('lista', { 
+        razas: Perro.fetchAll(),
+        ultimo_perro: request.session.ultimo_perro || '', 
+    });
 };
