@@ -55,3 +55,15 @@ app.use((request, response, next) => {
 
 app.listen(3000);
 
+/*
+¿Qué beneficios encuentras en el estilo MVC?
+-Existe una separación de responsabilidades (modelo, vista, controlador), esto hace que sea más fácil entender el código, pues los componentes están divididos de acuerdo a las tareas que estos realizan.
+-Se puede reutilizaar el código, pudiendo pertenecer un modello para diferentes vistas/controladores sin tener que volver a copiarlo.
+-Se puede cambiar la vista sin afectar el modelo o controlador.
+-Fácil de colaborar pues la unión se da de mejor manera
+-Fácil de testear
+Referencia:https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-5.0
+¿Encuentras alguna desventaja en el estilo arquitectónico MVC?
+-Es algo compleja de usar, ya que de debe de implementar un código para la vista, otro para el modelo y otro para el controlador.
+-Se tiene que saber de la arquitectura para poder usarla, de otra manera, es difícil intuírla.
+*/
