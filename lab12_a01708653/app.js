@@ -42,6 +42,9 @@ const rutasChilaquiles = require('./routes/chilaquiles.routes');
 
 app.use('/chilaquiles', rutasChilaquiles);
 
+const RifaRutas= require('./routes/lab11.routes');
+app.use('/ingresar',RifaRutas);
+
 app.use((request, response, next) => {
     console.log("Tercer middleware");
 
