@@ -20,8 +20,13 @@ app.use('/hola', (request, response, next) => {
     response.send('Hola desde la ruta /hola');
 });
 
-const hockeyRutas = require('./routes/hockey.routes');
+const RifaRutas= require('./routes/rifa.routes');
+app.use('/ingresar',RifaRutas);
 
+const Lab1Rutas= require('./routes/lab1.routes');
+app.use('/lab1',Lab1Rutas);
+
+const hockeyRutas = require('./routes/hockey.routes');
 app.use('/hockey', hockeyRutas);
 
 app.use((request, response, next) => {

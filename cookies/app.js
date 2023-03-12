@@ -33,6 +33,10 @@ app.use('/hola', (request, response, next) => {
     response.send('Hola desde la ruta /hola');
 });
 
+const rutasUsuarios = require('./routes/usuarios.routes');
+
+app.use('/usuarios', rutasUsuarios);
+
 const rutasPerros = require('./routes/perros.routes');
 
 app.use('/perros', rutasPerros);
