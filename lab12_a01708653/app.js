@@ -55,3 +55,15 @@ app.use((request, response, next) => {
 });
 
 app.listen(3000);
+
+/*
+¿Qué otros templating engines existen para node?
+Existen varios templating engines, el que utilizamos en este caso fue EJS (Embedded JavaScript), que permite integrar JavaScript en HTML para hacer el renderizado del lado del servidor. Pero también existen:
+-Pug(antes Jade): Eran plantillas para escribir HTML de manera legible y con una sintaxis más sencilla que HTML
+-Handlebars: Puede crear plantillas dinámicas y reutilizables. Puede integrar datos del lado del servidor en la plantilla y crear estructuras complejas.
+-Nunjucks: Motor de plantillas que soporta herencia, bloques, macros, etc. Puede crear plantillas complenas y reutilizables de manera sencilla.
+-Mustache: Herramienta simple que permite crear plantillas reutilizables sin lógica de programación compleja. Puede integrar datos en la plantilla de manera sencilla.
+Fuentes:
+https://nodejs.org/en/docs/guides/view-engine/
+https://scotch.io/tutorials/the-ultimate-guide-to-nodejs-view-engines
+ */
