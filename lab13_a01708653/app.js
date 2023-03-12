@@ -41,6 +41,9 @@ app.use('/pelis', rutasPelis);
 const RifaRutas= require('./routes/lab11.routes');
 app.use('/ingresar',RifaRutas);
 
+const rutasLogin = require('./routes/login.routes');
+app.use('/login', rutasLogin);
+
 app.use((request, response, next) => {
     console.log("Tercer middleware");
 
@@ -51,3 +54,4 @@ app.use((request, response, next) => {
 });
 
 app.listen(3000);
+
