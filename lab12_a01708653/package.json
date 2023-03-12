@@ -23,11 +23,13 @@
   },
   "homepage": "https://github.com/mafeermoreno/TC2005B#readme",
   "devDependencies": {
+    "bulma": "^0.9.4",
     "nodemon": "^2.0.20"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
     "ejs": "^3.1.8",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "node-sass": "^8.0.0"
   }
 }

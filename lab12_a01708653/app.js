@@ -26,9 +26,13 @@ app.use('/hola', (request, response, next) => {
     response.send('Hola desde la ruta /hola');
 });
 
-const rutasPerros = require('./routes/perros.routes');
+const rutasPelis = require('./routes/pelis.routes');
 
-app.use('/perros', rutasPerros);
+app.use('/pelis', rutasPelis);
+
+const rutasLogin = require('./routes/login.routes');
+
+app.use('/login', rutasLogin);
 
 const hockeyRutas = require('./routes/hockey.routes');
 

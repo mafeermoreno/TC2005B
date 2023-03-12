@@ -1,38 +1,38 @@
 <%- include('includes/head.ejs') %>
 
-<h1 class="title">Razas de perros</h1>
+<h1 class="title" style="color:#fe46a5">Películas de Barbie</h1>
 
-<% if (razas.length > 0) { %>
+<% if (pelis.length > 0) { %>
     <div class="columns">
         <% let columns = 0; %>
-        <% for (let raza of razas) { %>
+        <% for (let peli of pelis) { %>
             <% if (columns % 4 == 0) { %>
     </div>
     <div class="columns">
             <% } %>
             <% columns++; %>
             <div class="column">
-                <div class="card">
+                <div class="card" style="background-color: #fadce6 ;">
                     <div class="card-image">
                         <figure class="image is-4by3">
-                            <img src="<%= raza.imagen %>" alt="Placeholder image">
+                            <img src="<%= peli.imagen %>" alt="Placeholder image">
                         </figure>
                     </div>
                     <div class="card-content">
                         <div class="media">
                             <div class="media-left">
                                 <figure class="image is-48x48">
-                                    <img src="<%= raza.imagen %>" alt="Placeholder image">
+                                    <img src="<%= peli.imagen %>" alt="Placeholder image">
                                 </figure>
                             </div>
                             <div class="media-content">
-                                <p class="title is-4"><%= raza.raza %></p>
-                                <p class="subtitle is-6"><%= raza.handle %></p>
+                                <p class="title is-4"><%= peli.peli %></p>
+                                <p class="subtitle is-6"><%= peli.handle %></p>
                             </div>
                         </div>
                     
                         <div class="content">
-                            <%= raza.descripcion %> <a><%= raza.handle %></a>.
+                            <%= peli.descripcion %> <a><%=peli.handle %></a>.
                             <a href="#">#css</a> <a href="#">#responsive</a>
                             <br>
                             <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
@@ -43,7 +43,7 @@
         <% } %>
     </div>
 <% } else { %>
-    <h1>No hay razas registradas</h1>
+    <h1>No hay pelis registradas</h1>
 <% } %>   
 
 <%- include('includes/foot.ejs') %>
