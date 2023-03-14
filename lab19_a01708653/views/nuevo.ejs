@@ -1,0 +1,27 @@
+<%- include('includes/head.ejs') %>
+
+<h1 class="title">Registrar nuevo perro</h1>
+
+<form action="/perros/nuevo" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+
+    <label for="nombre">Nombre:</label>
+    <input required name="nombre" id="nombre" class="input is-rounded" type="text" placeholder="Firulais">
+    <br><br>
+    <label for="raza">Raza:</label>
+    <div class="select is-primary">
+        <select name="raza" id="raza">
+            <% for (let raza of razas) { %>
+                <option value="<%= raza.id %>"><%= raza.nombre %></option>
+            <% } %>
+        </select>
+    </div>
+    <br><br>
+    <label for="descripcion">Descripcion:</label>
+    <input name="descripcion" id="descripcion" class="input is-rounded" type="text" placeholder="Firulais">
+    <br><br>
+    <input class="button is-rounded is-success" type="submit" value="Registrar">
+
+</form>
+
+<%- include('includes/foot.ejs') %>
