@@ -22,7 +22,7 @@ module.exports = class Usuario {
 
     static fetchOne(username){
         return db.execute(`
-            SELECT nombre 
+            SELECT * 
             FROM usuarios
             WHERE username = ?
         `, [username]);

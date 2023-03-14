@@ -7,6 +7,8 @@ exports.get_nuevo = (request, response, next) => {
     .then(([rows, fieldData]) => {
         response.render('nuevo', {
             razas: rows,
+            isLoggedIn: request.session.isLoggedIn || false,
+            nombre: request.session.nombre || '',
         });
     }).catch(error => console.log(error));
     
@@ -59,6 +61,8 @@ exports.listar = (request, response, next) => {
             razas: rows,
             ultimo_perro: request.session.ultimo_perro || '', 
             mensaje: mensaje,
+            isLoggedIn: request.session.isLoggedIn || false,
+            nombre: request.session.nombre || '',
         });
     })
     .catch(err => {
