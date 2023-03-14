@@ -1,0 +1,50 @@
+<%- include('includes/head.ejs') %>
+
+<h1 class="title" style="color:#fe46a5">Películas de Barbie</h1>
+
+
+<% if (generos.length > 0) { %>
+    <div class="columns">
+        <% let columns = 0; %>
+        <% for (let peli of generos) { %>
+            <% if (columns % 4 == 0) { %>
+    </div>
+    <div class="columns">
+            <% } %>
+            <% columns++; %>
+            <div class="column">
+                <div class="card" style="background-color: #fadce6 ;">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="<%= peli.imagen %>" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-48x48">
+                                    <img src="<%= peli.imagen %>" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-4"><%= peli.peli %></p>
+                                <p class="subtitle is-6"><%= peli.handle %></p>
+                            </div>
+                        </div>
+                    
+                        <div class="content">
+                            <%= peli.descripcion %> <a><%=peli.handle %></a>.
+                            <a href="#">#css</a> <a href="#">#responsive</a>
+                            <br>
+                            <time datetime="2023-03-11">11:09 PM - 11 March 2023</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+<% } else { %>
+    <h1>No hay pelis registradas</h1>
+<% } %>   
+
+<%- include('includes/foot.ejs') %>
