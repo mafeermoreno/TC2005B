@@ -1,11 +1,33 @@
 const Usuario = require('../models/usuarios.model');
 
 exports.get_login = (request, response, next) => {
-    response.render('login');
+
+    const mensaje = request.session.mensaje || '';
+
+    if (request.session.mensaje) {
+        request.session.mensaje  = '';
+    }
+
+    response.render('login', {
+        mensaje: mensaje,
+    });
 };
 
 exports.post_login = (request, response, next) => {
-    response.redirect('/perros');
+
+    Usuario.fetchOne(request.body.username)
+    .then(([rows, fieldData]) => {
+        if (rows.length == 1) {
+            response.redirect('/perros');
+        } else {
+            request.session.mensaje = "Usuario y/o contraseña incorrectos";
+            response.redirect('/usuarios/login');
+        }
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
 };
 
 
@@ -28,6 +50,6 @@ exports.post_signup = (request, response, next) => {
 
 exports.logout = (request, response, next) => {
     request.session.destroy(() => {
-        response.redirect('/perros'); //Este código se ejecuta cuando la sesión se elimina.
+        response.redirect('/usuarios/login'); //Este código se ejecuta cuando la sesión se elimina.
     });
 };
