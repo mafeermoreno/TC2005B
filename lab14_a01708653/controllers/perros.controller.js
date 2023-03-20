@@ -22,9 +22,11 @@ exports.listar = (request, response, next) => {
 
     //Crear variable para que si no hay cookie se cuente con un string para hacer el split
     let cookies = request.get('Cookie') || '';
+    console.log(cookies);
 
     let consultas = cookies.split(';')[0].split('=')[1] || 0;
-
+    console.log(consultas);
+    
     consultas++;
 
     response.setHeader('Set-Cookie', 'consultas=' + consultas + '; HttpOnly');

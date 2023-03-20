@@ -14,9 +14,25 @@ exports.post_nueva = (request, response, next) => {
 
     pelicula.save();
 
+    request.session.ultima_pelicula = pelicula.nombre;
+
     response.redirect('/pelis/');
 };
 
 exports.catalogar = (request, response, next) => {
-    response.render('catalogo', { generos: Pelicula.fetchAll() });
+
+    let cookies = request.get('Cookie') || '';
+    console.log(cookies);
+
+    let consultas = cookies.split(';')[0].split('=')[1] || 0;
+    console.log(consultas);
+    
+    consultas++;
+
+    response.setHeader('Set-Cookie', 'consultas=' + consultas + '; HttpOnly');
+
+    response.render('catalogo', { 
+        generos: Pelicula.fetchAll(),
+        ultima_pelicula: request.session.ultima_pelicula || '',
+    });
 };
