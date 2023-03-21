@@ -68,3 +68,13 @@ app.use((request, response, next) => {
 });
 
 app.listen(3000);
+
+/*
+¿Qué otras formas de autentificación existen?
+-Autenticación por contraseñas (el que utilizamos)
+-Autenticación biométrica: Se usan características físicas como Face ID, huella dactilar, escaneo del ojo para verificar identidad.
+-Autenticación de certificados: Certificados digitales que tienen info de la ID del usuario y se utiliza para verificar identidad en línea.
+-Autenticación basada en la nube
+-Autenticación basada en la red (Dirección IP)
+-Autenticación de dos factores (Contraseña y un código enviado a SMS, o por ejemplo, la autenticación del Tec)
+*/

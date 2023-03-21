@@ -64,3 +64,16 @@ app.use((request, response, next) => {
 });
 
 app.listen(3000);
+
+/*
+¿Qué ventajas tiene escribir el código SQL únicamente en la capa del modelo?
+-Se puede reutilizar el código en toda la aplicación, evitando duplicar el código
+-Se puede separar las responsabilidades, pues es más fácil de entender y mantener, ya que cada capa tiene una función específica.
+-Se pueden aplicar medidas de seguridad como lo vimos en la clase para los datos.
+
+¿Qué es SQL injection y cómo se puede prevenir?
+-Es un ataque donde se ejecutan comandos en SQL de una página web no deseados o se accede/manipula datos de a base de datos, lo que hace que puedan leer, modificar o eliminar datos de la base de datos
+Se puede prevenir validando a los usuarios (como lo explicó Lalo, con autenticaciones que validen el usuario ingresado)
+Restringir permisos de acuerdo a los usuarios, para que estos tengan acceso limitado y realicen únicamente lo necesario
+Consultas preparadas para evitar inyectar código malo.
+ */
