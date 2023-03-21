@@ -1,15 +1,7 @@
 const Perro = require('../models/perros.model');
-const Raza = require('../models/razas.model');
 
 exports.get_nuevo = (request, response, next) => {
-
-    Raza.fetchAll()
-    .then(([rows, fieldData]) => {
-        response.render('nuevo', {
-            razas: rows,
-        });
-    }).catch(error => console.log(error));
-    
+    response.render('nuevo');
 };
 
 exports.post_nuevo = (request, response, next) => {
@@ -20,19 +12,12 @@ exports.post_nuevo = (request, response, next) => {
         descripcion: request.body.descripcion,
     });
 
-    perro.save()
-    .then(([rows, fieldData]) => {
+    perro.save();
 
-        request.session.mensaje = "El perro fue registrado exitosamente.";
+    request.session.ultimo_perro = perro.nombre;
 
-        request.session.ultimo_perro = perro.nombre;
-
-        response.redirect('/perros/');
-    })
-    .catch((error) => {console.log(error)});
-
+    response.redirect('/perros/');
 };
-
 exports.listar = (request, response, next) => {
 
     //Crear variable para que si no hay cookie se cuente con un string para hacer el split
@@ -44,26 +29,8 @@ exports.listar = (request, response, next) => {
 
     response.setHeader('Set-Cookie', 'consultas=' + consultas + '; HttpOnly');
 
-    let mensaje = '';
-
-    if (request.session.mensaje) {
-        mensaje = request.session.mensaje;
-        request.session.mensaje = '';
-    }
-
-    Perro.fetch(request.params.id)
-    .then(([rows, fieldData]) => {
-        console.log(rows);
-        
-        response.render('lista', { 
-            razas: rows,
-            ultimo_perro: request.session.ultimo_perro || '', 
-            mensaje: mensaje,
-        });
-    })
-    .catch(err => {
-        console.log(err);
+    response.render('lista', { 
+        razas: Perro.fetchAll(),
+        ultimo_perro: request.session.ultimo_perro || '', 
     });
-
-    
 };
