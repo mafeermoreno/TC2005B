@@ -1,0 +1,26 @@
+<%- include('includes/head.ejs') %>
+
+<h1 class="title">Registrar nueva película</h1>
+
+<form action="/pelis/nueva" method="POST">
+
+    <label for="nombre">Nombre:</label>
+    <input required name="nombre" id="nombre" class="input is-rounded" type="text" placeholder="Barbie">
+    <br><br>
+    <label for="genero">Género:</label>
+    <div class="select is-primary">
+        <select name="genero" id="genero">
+            <% for (let genero of generos) { %>
+                <option value="<%= genero.id %>"><%= genero.nombre %></option>
+            <% } %>
+        </select>
+    </div>
+    <br><br>
+    <label for="descripcion">Descripcion:</label>
+    <input name="descripcion" id="descripcion" class="input is-rounded" type="text" placeholder="Película de...">
+    <br><br>
+    <input class="button is-rounded is-success" type="submit" value="Registrar" style="background-color: #fe46a5;">
+
+</form>
+
+<%- include('includes/foot.ejs') %>
