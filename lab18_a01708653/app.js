@@ -27,7 +27,6 @@ app.use((request, response, next) => {
     response.locals.csrfToken = request.csrfToken();
     next();
 });
-
 //Middleware
 app.use((request, response, next) => {
     console.log('Middleware!');
@@ -44,20 +43,20 @@ app.use('/hola', (request, response, next) => {
 });
 
 const rutasUsuarios = require('./routes/usuarios.routes');
-
 app.use('/usuarios', rutasUsuarios);
 
 const rutasPerros = require('./routes/perros.routes');
+app.use('/perros', rutasPerros);
 
-app.use('/perros', isAuth, rutasPerros);
 
-const hockeyRutas = require('./routes/hockey.routes');
+const rutasPelis = require('./routes/pelis.routes');
+app.use('/pelis', rutasPelis);
 
-app.use('/hockey', hockeyRutas);
+const RifaRutas= require('./routes/lab11.routes');
+app.use('/ingresar',RifaRutas);
 
-const rutasChilaquiles = require('./routes/chilaquiles.routes');
-
-app.use('/chilaquiles', rutasChilaquiles);
+const rutasLogin = require('./routes/login.routes');
+app.use('/login', rutasLogin);
 
 app.use((request, response, next) => {
     console.log("Tercer middleware");

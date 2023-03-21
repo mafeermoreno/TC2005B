@@ -28,7 +28,7 @@ exports.post_login = (request, response, next) => {
                     request.session.isLoggedIn = true;
                     request.session.nombre = rows[0].nombre;
                     return request.session.save(err => {
-                        response.redirect('/perros');
+                        response.redirect('/pelis/');
                     });
                     
                 } else {

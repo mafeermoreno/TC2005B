@@ -6,12 +6,6 @@
 
 <br><br>
 
-<% if (mensaje != '') { %>
-    <div class="notification is-info is-light">
-        <%= mensaje %>
-    </div>
-<% } %>
-
 <% if (razas.length > 0) { %>
     <div class="columns">
         <% let columns = 0; %>
@@ -45,7 +39,7 @@
                             <%= raza.descripcion %> <a><%= raza.handle %></a>.
                             <a href="#">#css</a> <a href="#">#responsive</a>
                             <br>
-                            <time datetime="<%= raza.created_at %>"><%= raza.created_at %></time>
+                            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                         </div>
                     </div>
                 </div>

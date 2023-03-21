@@ -1,6 +1,6 @@
 const db = require('../util/database');
 
-module.exports = class Raza {
+module.exports = class Genero {
 
     constructor() {
 
@@ -13,7 +13,7 @@ module.exports = class Raza {
     static fetchAll() {
         return db.execute(`
             SELECT id, nombre
-            FROM razas
+            FROM generos
         `);
     }
 }

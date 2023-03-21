@@ -3,8 +3,8 @@ const path = require('path');
 
 const router = express.Router();
 
-router.get('/ordenar', (request, response, next) => {
-    response.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
+router.get('/ingresar', (request, response, next) => {
+    response.sendFile(path.join(__dirname, '..', 'views', 'login.html'));
 });
 
 module.exports = router;
