@@ -1,0 +1,44 @@
+<%- include('includes/head.ejs') %>
+
+<% if(perro) { %> 
+    <h1 class="title">Editar perro</h1>
+    <form action="/perros/editar" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="<%= perro.id %>" >
+<% } else { %> 
+    <h1 class="title">Registrar nuevo perro</h1>
+    <form action="/perros/nuevo" method="POST" enctype="multipart/form-data">
+<% } %>
+
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+
+    <label for="nombre">Nombre:</label>
+    <input required name="nombre" id="nombre" class="input is-rounded" type="text" placeholder="Firulais"
+        value ="<% if(perro) { %> <%= perro.nombre %><% } %>">
+    <br><br>
+    <label for="raza">Raza:</label>
+    <div class="select is-primary">
+        <select name="raza" id="raza">
+            <% for (let raza of razas) { %>
+                <option value="<%= raza.id %>" <% if(perro.raza == raza.id) { %> selected <% } %>>
+                    <%= raza.nombre %>
+                </option>
+            <% } %>
+        </select>
+    </div>
+    <br><br>
+    <label for="descripcion">Descripcion:</label>
+    <input name="descripcion" id="descripcion" class="input is-rounded" type="text" placeholder="Firulais"
+        value ="<% if(perro) { %> <%= perro.descripcion %><% } %>">
+    <br><br>
+    <label for="imagen">Imagen:</label>
+    <input name="imagen" id="imagen" class="input is-rounded" type="file" >
+    <br><br>
+    <% if(perro != '') { %> 
+        <input class="button is-rounded is-success" type="submit" value="Actualizar">
+    <% } else { %> 
+        <input class="button is-rounded is-success" type="submit" value="Registrar">
+    <% } %>
+    
+</form>
+
+<%- include('includes/foot.ejs') %>
