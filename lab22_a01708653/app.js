@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 const fileStorage = multer.diskStorage({
     destination: (request, file, callback) => {
         //'uploads': Es el directorio del servidor donde se subirán los archivos 
-        callback(null, 'uploads');
+        callback(null, 'public/uploads');
     },
     filename: (request, file, callback) => {
         //aquí configuramos el nombre que queremos que tenga el archivo en el servidor, 

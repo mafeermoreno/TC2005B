@@ -61,6 +61,7 @@ exports.post_nuevo = (request, response, next) => {
         nombre: request.body.nombre,
         raza: request.body.raza,
         descripcion: request.body.descripcion,
+        imagen: request.file.filename,
     });
 
     perro.save()
