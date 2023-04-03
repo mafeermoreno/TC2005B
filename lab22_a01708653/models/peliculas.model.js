@@ -1,4 +1,4 @@
-const db =require ('../util/database');
+const db =require ('../util/database2');
 /*const  = [
     { 
         nombre: 'Barbie Cascanueces', 
