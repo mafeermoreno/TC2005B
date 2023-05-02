@@ -1,7 +1,5 @@
 const express = require('express');
-
 const router = express.Router();
-
 const pelisController = require('../controllers/pelis.controller');
 
 router.get('/nueva', pelisController.get_nueva);

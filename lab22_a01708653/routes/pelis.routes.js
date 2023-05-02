@@ -10,7 +10,7 @@ router.get('/nueva', hasCreate, pelisController.get_nueva);
 
 router.post('/nueva', hasCreate, pelisController.post_nueva);
 
-router.get('/: id', pelisController.catalogar);
+router.get('/:id', pelisController.catalogar);
 
 router.get('/', pelisController.catalogar);
 
