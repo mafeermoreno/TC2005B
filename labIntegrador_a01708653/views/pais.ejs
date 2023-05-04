@@ -1,0 +1,35 @@
+<%- include('includes/head.ejs') %>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title is-1">Información de <%= country.name.common %></h1>
+
+    <div class="columns">
+      <div class="column is-half">
+        <div class="box">
+          <h2 class="subtitle">Información General</h2>
+          <p><strong>Capital:</strong> <%= country.capital[0] %></p>
+          <p><strong>Moneda:</strong> <%= Object.values(country.currencies)[0].name %></p>
+          <p><strong>Idioma(s):</strong> <%= Object.values(country.languages).join(', ') %></p>
+          <p><strong>Población:</strong> <%= country.population.toLocaleString() %></p>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="box">
+          <h2 class="subtitle">Banderas</h2>
+          <figure class="image">
+            <img src="<%= country.flags.png %>" alt="<%= country.name.common %> Flag">
+          </figure>
+          <br>
+          <figure class="image">
+            <img src="<%= country.flags.svg %>" alt="<%= country.name.common %> Flag">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('includes/foot.ejs') %>
+

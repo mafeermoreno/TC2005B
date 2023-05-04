@@ -1,0 +1,111 @@
+<%- include('includes/head.ejs') %>
+
+<h1>Gráficas</h1>
+
+<div class="container">
+  <h2>Estadísticas</h2>
+  <canvas id="chart"></canvas>
+  <div>
+    <button id="toggleCierre" class="button is-primary">Cierre</button>
+    <button id="toggleApertura" class="button is-link">Apertura</button>
+    <button id="toggleMaximo" class="button is-success">Máximo</button>
+    <button id="toggleMinimo" class="button is-danger">Mínimo</button>
+    <button id="toggleVol" class="button is-warning">Volumen</button>
+    <button id="toggleVariacion" class="button is-dark">Variación</button>
+  </div>
+</div>
+
+<script>
+  // Obtener contexto de canvas para la gráfica
+  const ctx = document.getElementById('chart').getContext('2d');
+
+  // Definir datos para la gráfica
+  const data = {
+    labels: <%- JSON.stringify(labels) %>,
+    datasets: [
+      {
+        label: 'Cierre',
+        data: <%- JSON.stringify(cierre) %>,
+        borderColor: 'blue',
+        borderWidth: 1,
+        fill: false,
+        hidden: false
+      },
+      {
+        label: 'Apertura',
+        data: <%- JSON.stringify(apertura) %>,
+        borderColor: 'red',
+        borderWidth: 1,
+        fill: false,
+        hidden: false
+      },
+      {
+        label: 'Máximo',
+        data: <%- JSON.stringify(maximo) %>,
+        borderColor: 'green',
+        borderWidth: 1,
+        fill: false,
+        hidden: false
+      },
+      {
+        label: 'Mínimo',
+        data: <%- JSON.stringify(minimo) %>,
+        borderColor: 'purple',
+        borderWidth: 1,
+        fill: false,
+        hidden: false
+      },
+      {
+        label: 'Volumen',
+        data: <%- JSON.stringify(vol) %>,
+        borderColor: 'orange',
+        borderWidth: 1,
+        fill: false,
+        hidden: false
+      },
+      {
+        label: 'Variación',
+        data: <%- JSON.stringify(variacion) %>,
+        borderColor: 'black',
+        borderWidth: 1,
+        fill: false,
+        hidden: false
+      }
+    ]
+  };
+
+  // Definir opciones para la gráfica
+  const options = {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  };
+
+  // Crear objeto Chart para la gráfica
+  const chart = new Chart(ctx, {
+    type: 'line',
+    data: data,
+    options: options
+  });
+
+  // Función para alternar la visualización de un conjunto de datos en la gráfica
+  function toggleDataset(index) {
+    chart.data.datasets[index].hidden = !chart.data.datasets[index].hidden;
+    chart.update();
+  }
+
+  // Asignar eventos de clic a los botones para activar o desactivar conjuntos de datos
+  document.getElementById('toggleCierre').addEventListener('click', () => toggleDataset(0));
+  document.getElementById('toggleApertura').addEventListener('click', () => toggleDataset(1));
+  document.getElementById('toggleMaximo').addEventListener('click', () => toggleDataset(2));
+  document.getElementById('toggleMinimo').addEventListener('click', () => toggleDataset(3));
+  document.getElementById('toggleVol').addEventListener('click', () => toggleDataset(4));
+  document.getElementById('toggleVariacion').addEventListener('click', () => toggleDataset(5));
+
+</script>
+
+<%- include('includes/foot.ejs') %>

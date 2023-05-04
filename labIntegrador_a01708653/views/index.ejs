@@ -1,0 +1,30 @@
+<%- include('includes/head.ejs') %>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Buscar información del país</h1>
+
+    <form method="post" action="/pais">
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">País:</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="text" name="country" id="country" required>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary" type="submit">Buscar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<%- include('includes/foot.ejs') %>
+

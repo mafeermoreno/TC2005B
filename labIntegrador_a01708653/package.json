@@ -23,16 +23,19 @@
   },
   "homepage": "https://github.com/mafeermoreno/TC2005B#readme",
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.22"
   },
   "dependencies": {
+    "axios": "^1.4.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "csurf": "^1.11.0",
-    "ejs": "^3.1.8",
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "multer": "^1.4.5-lts.1",
-    "mysql2": "^3.2.0"
+    "mysql2": "^3.2.4",
+    "node-fetch": "^3.3.1",
+    "path": "^0.12.7"
   }
 }
