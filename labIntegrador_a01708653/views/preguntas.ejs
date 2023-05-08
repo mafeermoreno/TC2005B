@@ -1,0 +1,55 @@
+<%- include('includes/head.ejs') %>
+
+<section class="section">
+    <div class="container">
+      <h1 class="title">Preguntas y respuestas del laboratorio 24 AJAX</h1>
+      <div class="columns is-multiline">
+        <div class="column is-half">
+          <div class="box">
+            <h2 class="title is-4">Pregunta 1:</h2>
+            <p class="subtitle is-5">¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications)?
+            </p>
+            <h2 class="title is-5">Respuesta:</h2>
+            <p class="subtitle is-6">AJAX (Asynchronous JavaScript and XML) es una tecnología web que permite actualizar una parte de una página web sin necesidad de recargar la página completa. Esto se logra enviando solicitudes asíncronas al servidor web en segundo plano utilizando JavaScript y recibiendo respuestas en formato XML, JSON u otro formato de datos.<br>
+            La importancia es que mejora la experiencia del usuario al hacer que las aplicaciones web sean más interactivas y responsivas. Gracias a AJAX, se pueden actualizar dinámicamente secciones específicas de una página web sin necesidad de recargarla completamente. Esto permite crear aplicaciones web más rápidas, eficientes y atractivas para los usuarios.</p>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="box">
+            <h2 class="title is-4">Pregunta 2:</h2>
+            <p class="subtitle is-5">¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?</p>
+            <h2 class="title is-5">Respuesta:</h2>
+            <p class="subtitle is-6">
+            <strong>1. Cross-Site Request Forgery (CSRF): </strong>Ataques de CSRF, donde se pueden enviar solicitudes maliciosas desde el usuario sin darse cuenta.
+            <strong>2. Fallos de seguridad en el servidor: </strong>Hay que configurar el servidor de manera segura y asegurarse de que se han implementado las medidas de seguridad necesarias (cortafuegos, control de logs, actualizaciones de software).
+            <strong>3. Cross-Site Scripting (XSS): </strong>AJAX permite inyectar código malicioso a través de las entradas del usuario.
+            </p>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="box">
+            <h2 class="title is-4">Pregunta 3:</h2>
+            <p class="subtitle is-5">¿Qué es JSON?</p>
+            <h2 class="title is-5">Respuesta:</h2>
+            <p class="subtitle is-6">Formato de texto plano utilizado para representar objetos y estructuras de datos utilizando una sintaxis sencilla y fácil de entender. Es un formato de intercambio de datos sencillo y muy utilizado en el desarrollo web para transmitir datos desde el servidor al cliente. </p>
+          </div>
+        </div>
+      </div>
+      <h1 class="title">Preguntas y respuestas del laboratorio 26 Servicios web</h1>
+      <div class="columns is-multiline">
+        <div class="column is-half">
+          <div class="box">
+            <h2 class="title is-4">Pregunta 1:</h2>
+            <p class="subtitle is-5">¿Qué ventajas y desventajas tiene la integración de tus aplicaciones web con servicios web desarrollados por terceros?
+            </p>
+            <h2 class="title is-5">Respuesta:</h2>
+            <p class="subtitle is-6">
+                La integración de aplicaciones web con servicios web de terceros puede tener beneficios como facilitar la integración, proporcionar funcionalidades especializadas, ofrecer mayor flexibilidad, reducir la carga de trabajo del equipo de desarrollo y permitir una mayor innovación. Sin embargo, también puede tener riesgos, como una mayor dependencia de los servicios de terceros, problemas de seguridad y de rendimiento, costos elevados y una pérdida de control sobre los servicios.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<%- include('includes/foot.ejs') %>

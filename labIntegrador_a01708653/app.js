@@ -42,6 +42,9 @@ app.use('/registros', rutasRegistros);
 const paisRoutes = require('./routes/pais.routes');
 app.use('/', paisRoutes);
 
+const preguntasRoutes = require('./routes/preguntas.routes');
+app.use('/preguntas', preguntasRoutes);
+
 app.use((request, response, next) => {
     console.log("Tercer middleware");
 
